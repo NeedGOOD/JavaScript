@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // вмикаємо тестування у bdd стилі
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai має багато всього, давайте зробимо assert глобальним
+        let assert = chai.assert;
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pow(x, n) {
+            let result = 1;
+
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+
+            return result;
+        }
+    </script>
+
+    <!-- скрипт з тестами (describe, it...) -->
+    <script src="test.js"></script>
+
+    <!-- елемент з id="mocha" буде містити результати тестів -->
+    <div id="mocha"></div>
+
+    <!-- запускаємо тести! -->
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>
